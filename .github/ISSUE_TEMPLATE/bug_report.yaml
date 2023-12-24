@@ -1,0 +1,73 @@
+# Docs - https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema
+name: Bug Report
+description: Found a problem? Help us improve.
+labels: [Bug]
+# title: "Bug: "
+# assignees:
+#   - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Important: Read First
+        
+        - If some section doesn't apply, use "N/A".
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug "is". You can also add Screenshots.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: How can this issue be reproduced?
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        Example:
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expectedBehavior
+    attributes:
+      label: Expected behavior?
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+        value: |
+          ## System Info
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: Versions before Windows 10 are not supported.
+      options:
+      - Windows 11
+      - Windows 10
+    validations:
+      required: true
+  - type: input
+    id: osVer
+    attributes:
+      label: Operating System Version
+      description: Versions before 1809 are not supported.
+      placeholder: "Example: 21H2"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        **Only needed if it's error related**
+        Put your log file from: C:\Users\{ Your User }\AppData\Local\Temp\Win-Debloat-Tools\logs\WinDebloatTools.log
+        TIP: press `Win + R` and type `%Temp%` then hit `ENTER`, now find the log file.
+    validations:
+      required: false
