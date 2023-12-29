@@ -273,5 +273,3 @@ Wanting to add improvements or fixes? Please check out the [CONTRIBUTING.md](CON
 Licensed under the [MIT](LICENSE.txt) license.
 
 **MalwareBytes AdwCleaner** and **O&O ShutUp10++** have their own licenses.
-
-
